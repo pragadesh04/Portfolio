@@ -1,80 +1,166 @@
-/* Global Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #126b00;
-    color: #126b00;
-}
-.images{
-margin: 10px;
-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-.navBar {
-    color: #353535; /* Dark grey */
+body{
+    background-color: #3AAFA9;
 }
 
-.nav-item a.nav-link {
-    color: #ffffff; /* Dark grey */
+.profile{
+    margin-top: 30px;
+    width: 750px;
 }
-
-.nav-item a.nav-link:hover {
-    color: #2bff00; /* Blue */
+.navbar{
+    background-color: #17252A;
+    color: #FEFFFF;
 }
-
-/* Padding */
-.pad {
-    padding: 10px;
-
+.navbar a{
+    color: White;
+    font-family: "Bebas Neue", cursive;
+    font-size: 30px;
 }
-.pad-title{
-    color: #2bff00;
+.navbar-right a:hover{
+    color: rgb(0, 0, 0);
 }
-/* Box Styles */
-.box {
-    background-color: #ffffff; /* Light grey */
-    margin: 10px;
-    padding: 10px;
+.small-container {
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     border-radius: 15px;
-    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
-}
-
-/* About Section */
-.about {
-    padding: 20px;
-}
-
-/* Progress Bar Styles */
-.progress-bar {
-    height: 20px;
-    line-height: 20px;
-    color: white;
-    text-align: center;
-    border-radius: 4px;
-    background-color: #007bff; /* Blue */
-}
-
-/* Contact Info Styles */
-.contact-info {
-    text-align: left;
-    font-weight: bold;
-    font-size: larger;
+    padding: 25px;
+  }
+.small-intro{
     margin-top: 20px;
+    text-align: center;
+}
+.intro{
+    font-family: "Bebas Neue", cursive;
+    font-size: 40px;
+    color: black;
+}
+.intro-head{
+    margin-top: 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 50px;
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.section h2{
+    font-family: "Exo 2", sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+.section ul :hover{
+    transition: 0.1s;
+    font-size: 20px;
+}
+.headings{
+    font-size: x-large;
 }
 
-.contact-info ul {
-    list-style: none;
-    padding: 0;
+
+.section {
+    background-color: #185552;
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 20px;
+    color: #DEF2F1;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.contact-info li {
-    margin-bottom: 10px;
-}
-
-.contact-info a {
-    color: #343a40; /* Dark grey */
+.sections a{
     text-decoration: none;
-    margin-left: 10px;
+    color: #00fff2;
 }
 
-.contact-info a:hover {
-    color: #126b00; /* Blue */
+.educations a{
+    text-decoration: none;
+    color: #00fff2;
+}
+
+.sections {
+    background-color: #185552;
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 20px;
+    color: #DEF2F1;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.new{
+    display: none;
+}
+
+.section{
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 0px 500px;    
+}
+
+.img{
+    animation: fade-left .8s;
+}
+
+.text-container{
+    animation: fade-right 1s;
+    
+}
+
+@keyframes fade-left {
+    0%{
+    opacity: 0;
+    transform: translateX(-500px) scale(0.5) ;
+}
+    100% {
+    opacity: 1;
+    transform: translateX(0px) scale(l);
+}
+}
+
+@keyframes fade-right {
+    0%{
+    opacity: 0;
+    transform: translateX(500px) scale(1.5) ;
+}
+    100% {
+    opacity: 1;
+    transform: translateX(0px) scale(l);
+}
+}
+
+@keyframes fade-in {
+    from {
+        scale: .7; opacity: 0;
+    }
+    to {
+        scale: 1; opacity: 1;
+    }
+}
+
+@media (max-width: 820px) {
+    .navbar ul{
+        display: none;
+    }
+    .profile{
+        margin-top: 0px;
+        width: 400px;
+    }
+    .intro{
+        font-size: 30px;
+    }
 }
